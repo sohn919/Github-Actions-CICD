@@ -8,6 +8,6 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String hello() {
-        return "hello-ec2-cicd-tests";
+        return "hello-ec2-cicd-test";
     }
 }
