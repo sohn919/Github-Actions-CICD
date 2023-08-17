@@ -1,20 +1,20 @@
-name: cicd
+# name: cicd
 
-on:
-  push:
-    branches: [ "main" ]
+# on:
+#   push:
+#     branches: [ "main" ]
 
-jobs:
-  deploy:
-    name: deploy
-    runs-on: ubuntu-latest
+# jobs:
+#   deploy:
+#     name: deploy
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: excuting remote ssh commands
-        uses: appleboy/ssh-action@v0.1.6
-        with:
-          host: ${{ secrets.REMOTE_IP }} # 인스턴스 IP
-          username: ${{ secrets.REMOTE_USER }} # 우분투 아이디
-          key: ${{ secrets.REMOTE_PRIVATE_KEY }} # ec2 instance pem key
-          port: ${{ secrets.REMOTE_SSH_PORT }} # 접속포트
-          script: ${{ secrets.REMOTE_SCRIPT }} # script
+#     steps:
+#       - name: excuting remote ssh commands
+#         uses: appleboy/ssh-action@master
+#         with:
+#           host: ${{ secrets.REMOTE_IP }} # 인스턴스 IP
+#           username: ${{ secrets.REMOTE_USER }} # 우분투 아이디
+#           key: ${{ secrets.REMOTE_PRIVATE_KEY }} # ec2 instance pem key
+#           port: ${{ secrets.REMOTE_SSH_PORT }} # 접속포트
+#           script: ${{ secrets.REMOTE_SCRIPT }}
